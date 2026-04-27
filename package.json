@@ -2,10 +2,11 @@
   "name": "simple-babel-template",
   "version": "1.0.0",
   "description": "A simple template for creating a Babel project",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "vite:build": "vite build",
+    "build": "babel src --out-dir lib",
     "preview": "vite preview",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
@@ -15,6 +16,9 @@
   "license": "ISC",
   "packageManager": "pnpm@10.30.2",
   "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
     "prettier": "^3.8.2",
     "vite": "^8.0.8"
   }
